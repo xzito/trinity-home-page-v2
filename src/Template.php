@@ -21,11 +21,15 @@ class Template {
   }
 
   public function include_template($template) {
-    if (get_page_template_slug() == $this->path()) {
+    if ($this->using_template()) {
       $template = $this->path();
     }
 
     return $template;
+  }
+
+  public function using_template($post = null) {
+    return (get_page_template_slug($post) == $this->path());
   }
 
   private function templates() {
