@@ -1,0 +1,26 @@
+{
+  "name": "xzito/trinity-home-page-v2",
+  "version": "0.1.0",
+  "type": "wordpress-muplugin",
+  "description": "Full-width home page design featuring a video banner.",
+  "homepage": "https://github.com/xzito/trinity-home-page-v2",
+  "authors": [
+    {
+      "name": "James Boynton",
+      "email": "james.boynton0@gmail.com",
+      "homepage": "https://github.com/jbboynton"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/xzito/trinity-home-page-v2/issues"
+  },
+  "require": {
+    "php": ">=7.0",
+    "composer/installers": ">=1.5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Xzito\\TrinityHomePageV2\\" : "src"
+    }
+  }
+}

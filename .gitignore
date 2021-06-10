@@ -1,0 +1,6 @@
+# Files
+.env
+dev_sync
+
+# Directories
+vendor/
