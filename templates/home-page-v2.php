@@ -5,7 +5,7 @@
 ?>
 
 <? get_header() ?>
-<div><h1>Home Page v2</h1></div>
+<div class="best-h1-ever"><h1>Home Page v2</h1></div>
 <? get_footer() ?>
 
 <?php
