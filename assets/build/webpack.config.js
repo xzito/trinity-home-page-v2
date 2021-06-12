@@ -1,4 +1,4 @@
-'use strict'; // eslint-disable-line
+'use strict';
 
 const path = require('path');
 const webpack = require('webpack');
@@ -11,11 +11,14 @@ const FriendlyErrorsPlugin = require('@soda/friendly-errors-webpack-plugin');
 
 const config = require('./config');
 
-module.exports = {
+let webpackConfig = {
   mode: process.env.NODE_ENV,
   context: config.paths.assets,
   entry: config.entry,
   devtool: (config.enabled.sourceMaps ? 'source-map' : undefined),
+  optimization: {
+    minimize: config.enabled.optimize,
+  },
   output: {
     path: config.paths.dist,
     filename: '[name].js',
@@ -140,3 +143,5 @@ module.exports = {
     new FriendlyErrorsPlugin(),
   ],
 };
+
+module.exports = webpackConfig;

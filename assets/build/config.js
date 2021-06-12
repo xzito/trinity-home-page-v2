@@ -3,7 +3,8 @@ const { argv } = require('yargs');
 const { merge } = require('webpack-merge');
 
 const rootPath = process.cwd();
-const isProduction = !!((argv.env && argv.env.production) || argv.p);
+const isProduction =
+  !!(process.env.NODE_ENV && (process.env.NODE_ENV == 'production'));
 
 let config = {
   entry: {
@@ -29,7 +30,3 @@ module.exports = merge(config, {
     argv.env,
   ),
 });
-
-if (process.env.NODE_ENV === undefined) {
-  process.env.NODE_ENV = isProduction ? 'production' : 'development';
-}

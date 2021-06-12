@@ -3,6 +3,5 @@
 dev_sync
 
 # Directories
-dist/
 node_modules/
 vendor/

@@ -6,9 +6,9 @@
   "author": "James Boynton <james.boynton0@gmail.com>",
   "private": true,
   "scripts": {
-    "build": "webpack --progress --config assets/build/webpack.config.js",
-    "build:production": "webpack --env.production --progress --config assets/build/webpack.config.js",
-    "start": "webpack --watch --progress --config assets/build/webpack.config.js",
+    "build": "webpack --node-env development --progress --config assets/build/webpack.config.js",
+    "build:production": "npm run -s rmdist && webpack --node-env production --progress --config assets/build/webpack.config.js",
+    "start": "webpack --node-env development watch --progress --config assets/build/webpack.config.js",
     "rmdist": "rimraf dist",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
     "lint:scripts": "eslint assets/scripts assets/build",
