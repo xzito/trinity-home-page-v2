@@ -2,10 +2,19 @@
 /**
  * Template Name: Home Page v2
  */
-?>
 
-<? get_header() ?>
-<div class="best-h1-ever"><h1>Home Page v2</h1></div>
-<? get_footer() ?>
+use Xzito\TrinityHomePageV2\Banner;
+use Xzito\TrinityHomePageV2\Partial;
 
-<?php
+get_header();
+
+
+while (have_posts()) {
+  the_post();
+
+  $banner = new Banner($post->ID);
+
+  require Partial::load('banner');
+}
+
+get_footer();

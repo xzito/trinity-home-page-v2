@@ -14,7 +14,7 @@ class FieldGroups {
   }
 
   private function acf_exported_php() {
-    return glob("{$this->acf_path()}/*.php");
+    return glob("{$this->acf_path()}/**/*.php");
   }
 
   private function acf_path() {

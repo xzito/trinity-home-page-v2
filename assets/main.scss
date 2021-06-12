@@ -1,3 +1,5 @@
-.best-h1-ever {
-  margin-top: 100px;
-}
+@import "~bootstrap/scss/bootstrap";
+@import "styles/common/_global.scss";
+@import "styles/common/_mixins.scss";
+@import "styles/common/_utilities.scss";
+@import "styles/components/_banner.scss";

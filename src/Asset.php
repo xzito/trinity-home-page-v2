@@ -2,7 +2,7 @@
 
 namespace Xzito\TrinityHomePageV2;
 
-class Assets {
+class Asset {
   public const DIST_DIR = 'dist';
   public const SCRIPTS_FILENAME = 'main.js';
   public const SCRIPTS_ID = 'trinity-home-page-v2/main.js';
@@ -14,12 +14,16 @@ class Assets {
     (new self())->enqueue_scripts();
   }
 
+  public static function path($asset) {
+    return (new self())->asset_path($asset);
+  }
+
   public function __construct() { }
 
   public function enqueue_styles() {
     wp_enqueue_style(
       self::STYLES_ID,
-      $this->asset_path(self::STYLES_FILENAME),
+      $this->asset_url(self::STYLES_FILENAME),
       false,
       null,
     );
@@ -28,16 +32,20 @@ class Assets {
   public function enqueue_scripts() {
     wp_enqueue_script(
       self::SCRIPTS_ID,
-      $this->asset_path(self::SCRIPTS_FILENAME),
-      ['jQuery'],
+      $this->asset_url(self::SCRIPTS_FILENAME),
+      [],
       null,
       true,
     );
   }
 
-  private function asset_path($filename) {
+  public function asset_path($asset) {
+    return plugin_dir_path(__DIR__) . self::DIST_DIR . "/{$asset}";
+  }
+
+  private function asset_url($filename) {
     $path = content_url() . '/mu-plugins/' . plugin_basename(dirname(__DIR__));
 
-    return $path . '/' . self::DIST_DIR . '/' . $filename;
+    return "{$path}/" . self::DIST_DIR . "/{$filename}";
   }
 }

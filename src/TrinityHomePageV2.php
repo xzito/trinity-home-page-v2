@@ -2,7 +2,7 @@
 
 namespace Xzito\TrinityHomePageV2;
 
-use Xzito\TrinityHomePageV2\Assets;
+use Xzito\TrinityHomePageV2\Asset;
 use Xzito\TrinityHomePageV2\Editor;
 use Xzito\TrinityHomePageV2\FieldGroups;
 use Xzito\TrinityHomePageV2\Template;
@@ -38,7 +38,7 @@ class TrinityHomePageV2 {
   }
 
   public function enqueue_assets() {
-    Assets::enqueue();
+    Asset::enqueue();
   }
 
   public function register_template($page_templates) {
