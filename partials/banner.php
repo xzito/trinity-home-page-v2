@@ -62,11 +62,11 @@ use Xzito\TrinityHomePageV2\Asset;
         </a>
       </div>
       <div class="modal-body p-0">
-        <div class="ratio ratio-16x9">
+        <div id="hero-frame-wrapper" class="ratio ratio-16x9">
           <? if ($banner->button_video_source() == 'embed'): ?>
             <?= $banner->button_video_embed() ?>
           <? else: ?>
-            <iframe id="hero-embedded-video"></iframe>
+            <iframe id="hero-uploaded-video"></iframe>
           <? endif ?>
         </div>
       </div>

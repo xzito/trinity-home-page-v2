@@ -3,21 +3,63 @@ class Video {
     Object.assign(this, Object.assign(Object.seal({
       button: document.querySelector('#hero-video-btn'),
       modal: document.querySelector('#hero-video-modal'),
-      embed: document.querySelector('#hero-embedded-video'),
-      queryString: 'autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0',
+      frame: document.querySelector('#hero-frame-wrapper > iframe'),
+      upload: document.querySelector('#hero-uploaded-video'),
     }), options));
+
+    this.setSource();
+    this.addListeners();
   }
 
-  get source() {
-    return this.button.dataset.src;
+  setSource() {
+    this.source = this.buildSource();
   }
 
-  willUpdate() {
-    return (this.embed ? true : false);
+  buildSource() {
+    return (this.uploaded() ? this.uploadedSource() : this.embeddedSource());
+  }
+
+  uploaded() {
+    return (this.upload !== null ? true : false);
+  }
+
+  embedded() {
+    return !this.uploaded();
+  }
+
+  uploadedSource() {
+    return `${this.button.dataset.src}`;
+  }
+
+  embeddedSource() {
+    return this.frame.src;
+  }
+
+  addListeners() {
+    this.shownVideoListener();
+    this.hideVideoListener();
+  }
+
+  shownVideoListener() {
+    $(this.modal).on('shown.bs.modal', () => this.shown());
+  }
+
+  hideVideoListener() {
+    $(this.modal).on('hide.bs.modal', () => this.hide());
+  }
+
+  shown() {
+    this.updateSource(this.source);
+  }
+
+  hide() {
+    this.updateSource('');
   }
 
   updateSource(newSource) {
-    this.embed.src = newSource;
+    if (this.frame.src !== newSource) {
+      this.frame.src = newSource;
+    }
   }
 }
 
