@@ -30,7 +30,7 @@ class TrinityHomePageV2 {
   }
 
   public function add_field_groups() {
-    new FieldGroups();
+    FieldGroups::register();
   }
 
   public function remove_editor() {

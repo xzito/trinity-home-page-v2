@@ -14,6 +14,10 @@ class Template {
     return (new self())->include_template($template);
   }
 
+  public static function used_by($post) {
+    return (new self())->using_template($post);
+  }
+
   public function __construct() { }
 
   public function register_template($page_templates) {

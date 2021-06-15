@@ -3,7 +3,6 @@
 namespace Xzito\TrinityHomePageV2;
 
 class Showcase {
-  private $id;
   private $heading;
   private $subheading;
   private $text;

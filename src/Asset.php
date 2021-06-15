@@ -2,6 +2,8 @@
 
 namespace Xzito\TrinityHomePageV2;
 
+use Xzito\TrinityHomePageV2\Template;
+
 class Asset {
   public const DIST_DIR = 'dist';
   public const SCRIPTS_FILENAME = 'main.js';
@@ -10,8 +12,12 @@ class Asset {
   public const STYLES_ID = 'trinity-home-page-v2/main.css';
 
   public static function enqueue() {
-    (new self())->enqueue_styles();
-    (new self())->enqueue_scripts();
+    global $post;
+
+    if (Template::used_by($post)) {
+      (new self())->enqueue_styles();
+      (new self())->enqueue_scripts();
+    }
   }
 
   public static function path($asset) {

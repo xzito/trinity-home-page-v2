@@ -3,9 +3,11 @@
 namespace Xzito\TrinityHomePageV2;
 
 class FieldGroups {
-	public function __construct() {
-    $this->add_field_groups();
-	}
+  public static function register() {
+    (new self())->add_field_groups();
+  }
+
+	public function __construct() { }
 
 	public function add_field_groups() {
     foreach ($this->acf_exported_php() as $acf) {

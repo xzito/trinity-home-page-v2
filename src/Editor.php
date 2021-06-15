@@ -13,9 +13,7 @@ class Editor {
       return;
     }
 
-    $using_template = (new Template())->using_template($post);
-
-    if (is_admin() && $using_template) {
+    if (is_admin() && Template::used_by($post)) {
       remove_post_type_support('page', 'editor');
     }
   }
