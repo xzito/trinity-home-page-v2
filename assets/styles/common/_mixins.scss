@@ -4,18 +4,18 @@
 }
 
 @mixin clip($top: "", $bottom: "", $size: "") {
-  $amount: 5vw;
+  $amount: $clip-amount-lg;
   $top-left: 0 0;
   $top-right: 100% 0;
   $bottom-left: 0 100%;
   $bottom-right: 100% 100%;
 
   @if $size == "small" {
-    $amount: 2vw;
+    $amount: $clip-amount-sm;
   }
 
   @else if $size == "large" {
-    $amount: 5vw;
+    $amount: $clip-amount-lg;
   }
 
   @if $top == "up" {

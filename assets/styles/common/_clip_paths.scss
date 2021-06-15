@@ -15,11 +15,11 @@
 }
 
 .clip-margin-fix-sm {
-  margin-bottom: -2vw;
+  margin-bottom: $clip-margin-fix-sm;
 }
 
 .clip-margin-fix-lg {
-  margin-bottom: -5vw;
+  margin-bottom: $clip-margin-fix-lg;
 }
 
 .clip-row-widening {
@@ -56,12 +56,12 @@
 
 .clip-row-margin-fix {
   @include media-breakpoint-up(md) {
-    margin-bottom: -5vw;
+    margin-bottom: $clip-margin-fix-lg;
   }
 }
 
 .clip-col-margin-fix {
-  margin-bottom: -5vw;
+  margin-bottom: $clip-margin-fix-lg;
 
   @include media-breakpoint-up(md) {
     margin-bottom: unset;

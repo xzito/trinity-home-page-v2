@@ -45,7 +45,7 @@ h2.hero {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  margin-bottom: -5vw;
+  margin-bottom: $clip-margin-fix-lg;
   min-height: 500px;
   position: relative;
   overflow: hidden;
