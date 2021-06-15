@@ -1,27 +1,29 @@
 <?php
 
 use Xzito\TrinityHomePageV2\Asset;
+use Xzito\TrinityHomePageV2\Banner;
 
+$banner = new Banner($post->ID);
 ?>
 
 <? if ($banner->background_type() == 'video'): ?>
-	<div class="hero-container clip-bottom-down">
+	<div class="hero-container">
 		<video class="hero-bg-video" playsinline autoplay muted loop poster="<?= $banner->background_video_poster() ?>">
 			<source src="<?= $banner->background_video_webm() ?>" type="video/webm">
 			<source src="<?= $banner->background_video_mp4() ?>" type="video/mp4">
 		</video>
 <? elseif ($banner->background_type() == 'image'): ?>
-	<div class="hero-container clip-bottom-down" style="background-image: url('<?= $banner->background_image() ?>')">
+	<div class="hero-container" style="background-image: url('<?= $banner->background_image() ?>')">
 <? else: ?>
-	<div class="hero-container clip-bottom-down">
+	<div class="hero-container">
 <? endif ?>
   <? if ($banner->background_tinted()): ?>
     <div class="hero-opacity">&nbsp;</div>
   <? endif ?>
-  <div class="row g-0 w-100 py-6 hero-row">
+  <div class="row g-0 w-100 hero-row">
     <div class="col d-flex flex-column align-items-center justify-content-center">
       <div class="w-100">
-        <div class="container py-6">
+        <div class="container py-5">
           <div class="row">
             <div class="col d-flex flex-column align-items-center">
               <h1 class="hero"><?= $banner->title() ?></h1>

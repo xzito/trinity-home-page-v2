@@ -2,3 +2,41 @@
   height: 100%;
   background-color: rgba($theme-color, $opacity);
 }
+
+@mixin clip($top: "", $bottom: "", $size: "") {
+  $amount: 5vw;
+  $top-left: 0 0;
+  $top-right: 100% 0;
+  $bottom-left: 0 100%;
+  $bottom-right: 100% 100%;
+
+  @if $size == "small" {
+    $amount: 2vw;
+  }
+
+  @else if $size == "large" {
+    $amount: 5vw;
+  }
+
+  @if $top == "up" {
+    $top-left: 0 $amount;
+    $top-right: 100% 0;
+  }
+
+  @else if $top == "down" {
+    $top-left: 0 0;
+    $top-right: 100% $amount;
+  }
+
+  @if $bottom == "up" {
+    $bottom-left: 0 100%;
+    $bottom-right: 100% calc(100% - #{$amount});
+  }
+
+  @else if $bottom == "down" {
+    $bottom-left: 0 calc(100% - #{$amount});
+    $bottom-right: 100% 100%;
+  }
+
+  clip-path: polygon($top-left, $top-right, $bottom-right, $bottom-left);
+}

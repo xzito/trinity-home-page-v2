@@ -38,17 +38,20 @@ h2.hero {
 }
 
 .hero-container {
+  @include clip($bottom: "down", $size: "large");
+
   background-color: #212529;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  min-height: 400px;
+  margin-bottom: -5vw;
+  min-height: 500px;
   position: relative;
   overflow: hidden;
 
   @include media-breakpoint-up(md) {
-    min-height: 500px;
+    min-height: 600px;
   }
 
   @include media-breakpoint-up(lg) {

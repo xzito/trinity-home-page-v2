@@ -1,0 +1,22 @@
+h3.showcase {
+  font-family: "prenton", sans-serif;
+  color: #f25044;
+  text-transform: uppercase;
+}
+
+h4.showcase {
+  font-family: "prenton", sans-serif;
+  text-transform: uppercase;
+}
+
+.showcase-bg {
+  min-height: 275px;
+
+  @include media-breakpoint-up(md) {
+    min-height: 400px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-height: 550px;
+  }
+}

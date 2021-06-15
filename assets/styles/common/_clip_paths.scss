@@ -1,0 +1,69 @@
+.clip-widening-sm {
+  @include clip($top: "up", $bottom: "down", $size: "small");
+}
+
+.clip-widening-lg {
+  @include clip($top: "up", $bottom: "down", $size: "large");
+}
+
+.clip-shrinking-sm {
+  @include clip($top: "down", $bottom: "up", $size: "small");
+}
+
+.clip-shrinking-lg {
+  @include clip($top: "down", $bottom: "up", $size: "large");
+}
+
+.clip-margin-fix-sm {
+  margin-bottom: -2vw;
+}
+
+.clip-margin-fix-lg {
+  margin-bottom: -5vw;
+}
+
+.clip-row-widening {
+  clip-path: unset;
+
+  @include media-breakpoint-up(md) {
+    @include clip($top: "up", $bottom: "down", $size: "large");
+  }
+}
+
+.clip-row-shrinking {
+  clip-path: unset;
+
+  @include media-breakpoint-up(md) {
+    @include clip($top: "down", $bottom: "up", $size: "large");
+  }
+}
+
+.clip-col-widening {
+  @extend .clip-widening-lg;
+
+  @include media-breakpoint-up(md) {
+    clip-path: unset;
+  }
+}
+
+.clip-col-shrinking {
+  @extend .clip-shrinking-lg;
+
+  @include media-breakpoint-up(md) {
+    clip-path: unset;
+  }
+}
+
+.clip-row-margin-fix {
+  @include media-breakpoint-up(md) {
+    margin-bottom: -5vw;
+  }
+}
+
+.clip-col-margin-fix {
+  margin-bottom: -5vw;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: unset;
+  }
+}
