@@ -67,3 +67,19 @@
     margin-bottom: unset;
   }
 }
+
+.clip-card-widening {
+  @extend .clip-widening-lg;
+
+  @include media-breakpoint-up(lg) {
+    @include clip($top: "up", $bottom: "down", $size: "small");
+  }
+}
+
+.clip-card-shrinking {
+  @extend .clip-shrinking-lg;
+
+  @include media-breakpoint-up(lg) {
+    @include clip($top: "down", $bottom: "up", $size: "small");
+  }
+}

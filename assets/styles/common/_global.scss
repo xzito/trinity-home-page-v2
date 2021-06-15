@@ -4,6 +4,10 @@ body {
 
 a {
   text-decoration: none;
+
+  &:hover {
+    color: #f9f5ef;
+  }
 }
 
 .bg-full {
@@ -12,4 +16,8 @@ a {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
+}
+
+.bg-transparent {
+  background-color: transparent;
 }

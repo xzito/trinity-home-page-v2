@@ -1,0 +1,131 @@
+<?php
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array(
+  'key' => 'group_60c8f5b20cf92',
+  'title' => 'Home Page v2 – Card Fields',
+  'fields' => array(
+    array(
+      'key' => 'field_60c8fa4a643b8',
+      'label' => '',
+      'name' => 'home_page_v2_card',
+      'type' => 'group',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array(
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'layout' => 'row',
+      'sub_fields' => array(
+        array(
+          'key' => 'field_60c8fa7e643b9',
+          'label' => 'Section Heading',
+          'name' => 'section_heading',
+          'type' => 'text',
+          'instructions' => '',
+          'required' => 1,
+          'conditional_logic' => 0,
+          'wrapper' => array(
+            'width' => '',
+            'class' => '',
+            'id' => '',
+          ),
+          'default_value' => '',
+          'placeholder' => '',
+          'prepend' => '',
+          'append' => '',
+          'maxlength' => '',
+        ),
+        array(
+          'key' => 'field_60c8fa8a643ba',
+          'label' => 'Featured Pages and Posts',
+          'name' => 'cards',
+          'type' => 'repeater',
+          'instructions' => '',
+          'required' => 0,
+          'conditional_logic' => 0,
+          'wrapper' => array(
+            'width' => '',
+            'class' => '',
+            'id' => '',
+          ),
+          'collapsed' => 'field_60c8faad643bb',
+          'min' => 6,
+          'max' => 6,
+          'layout' => 'block',
+          'button_label' => 'Add Feature',
+          'sub_fields' => array(
+            array(
+              'key' => 'field_60c8faad643bb',
+              'label' => 'Card Heading',
+              'name' => 'heading',
+              'type' => 'text',
+              'instructions' => '',
+              'required' => 1,
+              'conditional_logic' => 0,
+              'wrapper' => array(
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+              ),
+              'default_value' => '',
+              'placeholder' => '',
+              'prepend' => '',
+              'append' => '',
+              'maxlength' => '',
+            ),
+            array(
+              'key' => 'field_60c8fabf643bc',
+              'label' => 'Feature',
+              'name' => 'post',
+              'type' => 'post_object',
+              'instructions' => '',
+              'required' => 1,
+              'conditional_logic' => 0,
+              'wrapper' => array(
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+              ),
+              'post_type' => array(
+                0 => 'post',
+                1 => 'page',
+                2 => 'people',
+                3 => 'show',
+                4 => 'tribe_events',
+              ),
+              'taxonomy' => '',
+              'allow_null' => 0,
+              'multiple' => 0,
+              'return_format' => 'id',
+              'ui' => 1,
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'location' => array(
+    array(
+      array(
+        'param' => 'page_template',
+        'operator' => '==',
+        'value' => '/var/www/app/content/mu-plugins/trinity-home-page-v2/templates/home-page-v2.php',
+      ),
+    ),
+  ),
+  'menu_order' => 2,
+  'position' => 'acf_after_title',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => true,
+  'description' => '',
+));
+
+endif;

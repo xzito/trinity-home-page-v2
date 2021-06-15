@@ -1,0 +1,81 @@
+h3.featured-card {
+  font-family: "prenton-ultra-condensed", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(md) {
+    font-size: 4rem;
+  }
+}
+
+h4.featured-card {
+  font-family: "prenton-condensed", sans-serif;
+  text-transform: uppercase;
+}
+
+.featured-card-body {
+  background-color: #f25044;
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.featured-card-img {
+  height: 275px;
+
+  @include media-breakpoint-up(md) {
+    height: 350px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 200px;
+  }
+}
+
+.featured-card-link {
+  display: block;
+  font-family: "prenton-ultra-condensed", sans-serif;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background-color: #f25044;
+  text-transform: uppercase;
+  transition: all 0.4s;
+
+  &:hover {
+    transition: all 0.1s;
+    color: #f25044;
+    background-color: $black;
+
+    .featured-card-body {
+      background-color: $black;
+    }
+  }
+}
+
+.featured-card-title {
+  font-family: "prenton-condensed", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  padding-bottom: 0.875rem;
+  text-align: center;
+  transition: all 0.4s;
+
+  @include media-breakpoint-up(md) {
+    padding-bottom: 1.25rem;
+  }
+}
