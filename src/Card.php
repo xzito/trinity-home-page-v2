@@ -20,6 +20,7 @@ class Card {
 
   public function __construct($fields) {
     $this->heading = $fields['heading'];
+    $this->image = $fields['image'];
     $this->post_id = $fields['post'];
   }
 
@@ -27,15 +28,11 @@ class Card {
     return $this->heading;
   }
 
-  public function title() {
-    return get_the_title($this->post_id);
-  }
-
   public function link() {
     return get_page_link($this->post_id);
   }
 
   public function image() {
-    return get_the_post_thumbnail_url($this->post_id, 'large');
+    return $this->image['url'];
   }
 }

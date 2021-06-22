@@ -23,9 +23,9 @@ $cards = Card::all($post->ID);
           <? endif ?>
             <a class="h-100 p-0 card-title featured-card-link" href="<?= $card->link() ?>">
               <div class="h-100 mx-auto card rounded-0">
-                <div class="d-block card-img-top bg-image featured-card-img" style="background-image: url('<?= $card->image() ?>')"></div>
+                <div class="d-block card-img-top bg-full featured-card-img" style="background-image: url('<?= $card->image() ?>')"></div>
                 <div class="card-body featured-card-body justify-content-center d-flex align-items-center">
-                  <p class="m-0 px-3 featured-card-title"><?= $card->title() ?></p>
+                  <p class="m-0 px-3 featured-card-title"><?= $card->heading() ?></p>
                 </div>
               </div>
             </a>

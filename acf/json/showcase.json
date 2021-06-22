@@ -27,7 +27,7 @@
                         "label": "Image",
                         "name": "image",
                         "type": "image",
-                        "instructions": "",
+                        "instructions": "At least 2560px × 1440px.",
                         "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -44,7 +44,7 @@
                         "max_width": "",
                         "max_height": "",
                         "max_size": "",
-                        "mime_types": ""
+                        "mime_types": "jpeg,jpg,gif,png"
                     },
                     {
                         "key": "field_60c793d9d0d75",

@@ -14,7 +14,6 @@ while (have_posts()) {
   require Partial::load('banner');
   require Partial::load('showcase');
   require Partial::load('cards');
-  require Partial::load('cards_with_headings');
 }
 
 get_footer();

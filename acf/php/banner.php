@@ -143,7 +143,7 @@ acf_add_local_field_group(array(
               'label' => 'MP4 Video',
               'name' => 'mp4',
               'type' => 'file',
-              'instructions' => '',
+              'instructions' => 'Recommended size of less than 6 MB.',
               'required' => 1,
               'conditional_logic' => 0,
               'wrapper' => array(
@@ -162,7 +162,7 @@ acf_add_local_field_group(array(
               'label' => 'WebM Video',
               'name' => 'webm',
               'type' => 'file',
-              'instructions' => '',
+              'instructions' => 'Recommended size of less than 6 MB.',
               'required' => 0,
               'conditional_logic' => 0,
               'wrapper' => array(
@@ -181,7 +181,7 @@ acf_add_local_field_group(array(
               'label' => 'Poster Image',
               'name' => 'poster',
               'type' => 'image',
-              'instructions' => '',
+              'instructions' => 'At least 3840px × 2160px.',
               'required' => 1,
               'conditional_logic' => 0,
               'wrapper' => array(
@@ -192,8 +192,8 @@ acf_add_local_field_group(array(
               'return_format' => 'array',
               'preview_size' => 'medium',
               'library' => 'all',
-              'min_width' => '',
-              'min_height' => '',
+              'min_width' => 3840,
+              'min_height' => 2160,
               'min_size' => '',
               'max_width' => '',
               'max_height' => '',
@@ -207,7 +207,7 @@ acf_add_local_field_group(array(
           'label' => 'Background Image',
           'name' => 'background_image',
           'type' => 'image',
-          'instructions' => '',
+          'instructions' => 'At least 3840px × 2160px.',
           'required' => 1,
           'conditional_logic' => array(
             array(

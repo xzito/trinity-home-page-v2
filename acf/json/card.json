@@ -52,7 +52,7 @@
                         },
                         "collapsed": "field_60c8faad643bb",
                         "min": 6,
-                        "max": 6,
+                        "max": 0,
                         "layout": "block",
                         "button_label": "Add Feature",
                         "sub_fields": [
@@ -65,7 +65,7 @@
                                 "required": 1,
                                 "conditional_logic": 0,
                                 "wrapper": {
-                                    "width": "50",
+                                    "width": "",
                                     "class": "",
                                     "id": ""
                                 },
@@ -76,6 +76,30 @@
                                 "maxlength": ""
                             },
                             {
+                                "key": "field_60d2454e4d44a",
+                                "label": "Card Image",
+                                "name": "image",
+                                "type": "image",
+                                "instructions": "At least 1400px × 1200px.",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "preview_size": "medium",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": ""
+                            },
+                            {
                                 "key": "field_60c8fabf643bc",
                                 "label": "Feature",
                                 "name": "post",
@@ -84,7 +108,7 @@
                                 "required": 1,
                                 "conditional_logic": 0,
                                 "wrapper": {
-                                    "width": "50",
+                                    "width": "",
                                     "class": "",
                                     "id": ""
                                 },
