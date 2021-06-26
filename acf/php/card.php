@@ -1,5 +1,7 @@
 <?php
 
+namespace Xzito\TrinityHomePageV2;
+
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
@@ -60,25 +62,6 @@ acf_add_local_field_group(array(
           'button_label' => 'Add Feature',
           'sub_fields' => array(
             array(
-              'key' => 'field_60c8faad643bb',
-              'label' => 'Card Heading',
-              'name' => 'heading',
-              'type' => 'text',
-              'instructions' => '',
-              'required' => 1,
-              'conditional_logic' => 0,
-              'wrapper' => array(
-                'width' => '50',
-                'class' => '',
-                'id' => '',
-              ),
-              'default_value' => '',
-              'placeholder' => '',
-              'prepend' => '',
-              'append' => '',
-              'maxlength' => '',
-            ),
-            array(
               'key' => 'field_60d2454e4d44a',
               'label' => 'Card Image',
               'name' => 'image',
@@ -103,6 +86,25 @@ acf_add_local_field_group(array(
               'mime_types' => '',
             ),
             array(
+              'key' => 'field_60c8faad643bb',
+              'label' => 'Card Heading',
+              'name' => 'heading',
+              'type' => 'text',
+              'instructions' => '',
+              'required' => 1,
+              'conditional_logic' => 0,
+              'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+              ),
+              'default_value' => '',
+              'placeholder' => '',
+              'prepend' => '',
+              'append' => '',
+              'maxlength' => '',
+            ),
+            array(
               'key' => 'field_60c8fabf643bc',
               'label' => 'Feature',
               'name' => 'post',
@@ -111,7 +113,7 @@ acf_add_local_field_group(array(
               'required' => 1,
               'conditional_logic' => 0,
               'wrapper' => array(
-                'width' => '50',
+                'width' => '',
                 'class' => '',
                 'id' => '',
               ),
@@ -138,7 +140,7 @@ acf_add_local_field_group(array(
       array(
         'param' => 'page_template',
         'operator' => '==',
-        'value' => '/var/www/app/content/mu-plugins/trinity-home-page-v2/templates/home-page-v2.php',
+        'value' => Template::absolute_path(),
       ),
     ),
   ),

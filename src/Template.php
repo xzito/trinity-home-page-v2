@@ -18,6 +18,10 @@ class Template {
     return (new self())->using_template($post);
   }
 
+  public static function absolute_path() {
+    return (new self())->path();
+  }
+
   public function __construct() { }
 
   public function register_template($page_templates) {

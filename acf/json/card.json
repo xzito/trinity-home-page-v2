@@ -57,25 +57,6 @@
                         "button_label": "Add Feature",
                         "sub_fields": [
                             {
-                                "key": "field_60c8faad643bb",
-                                "label": "Card Heading",
-                                "name": "heading",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 1,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                },
-                                "default_value": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "maxlength": ""
-                            },
-                            {
                                 "key": "field_60d2454e4d44a",
                                 "label": "Card Image",
                                 "name": "image",
@@ -98,6 +79,25 @@
                                 "max_height": "",
                                 "max_size": "",
                                 "mime_types": ""
+                            },
+                            {
+                                "key": "field_60c8faad643bb",
+                                "label": "Card Heading",
+                                "name": "heading",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
                             },
                             {
                                 "key": "field_60c8fabf643bc",

@@ -1,5 +1,7 @@
 <?php
 
+namespace Xzito\TrinityHomePageV2;
+
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
@@ -143,7 +145,7 @@ acf_add_local_field_group(array(
               'label' => 'MP4 Video',
               'name' => 'mp4',
               'type' => 'file',
-              'instructions' => 'Recommended size of less than 6 MB.',
+              'instructions' => 'Recommended file size of 6 MB or smaller.',
               'required' => 1,
               'conditional_logic' => 0,
               'wrapper' => array(
@@ -162,7 +164,7 @@ acf_add_local_field_group(array(
               'label' => 'WebM Video',
               'name' => 'webm',
               'type' => 'file',
-              'instructions' => 'Recommended size of less than 6 MB.',
+              'instructions' => 'Recommended file size of 6 MB or smaller.',
               'required' => 0,
               'conditional_logic' => 0,
               'wrapper' => array(
@@ -192,13 +194,13 @@ acf_add_local_field_group(array(
               'return_format' => 'array',
               'preview_size' => 'medium',
               'library' => 'all',
-              'min_width' => 3840,
-              'min_height' => 2160,
+              'min_width' => '',
+              'min_height' => '',
               'min_size' => '',
               'max_width' => '',
               'max_height' => '',
               'max_size' => '',
-              'mime_types' => 'jpg,jpeg,gif,png',
+              'mime_types' => '',
             ),
           ),
         ),
@@ -232,7 +234,7 @@ acf_add_local_field_group(array(
           'max_width' => '',
           'max_height' => '',
           'max_size' => '',
-          'mime_types' => 'jpg,jpeg,gif,png',
+          'mime_types' => '',
         ),
         array(
           'key' => 'field_60c25aa893f2b',
@@ -358,7 +360,7 @@ acf_add_local_field_group(array(
           'name' => 'button_video_upload',
           'type' => 'file',
           'instructions' => '',
-          'required' => 0,
+          'required' => 1,
           'conditional_logic' => array(
             array(
               array(
@@ -444,7 +446,7 @@ acf_add_local_field_group(array(
       array(
         'param' => 'page_template',
         'operator' => '==',
-        'value' => '/var/www/app/content/mu-plugins/trinity-home-page-v2/templates/home-page-v2.php',
+        'value' => Template::absolute_path(),
       ),
     ),
   ),

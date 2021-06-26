@@ -140,7 +140,7 @@
                                 "label": "MP4 Video",
                                 "name": "mp4",
                                 "type": "file",
-                                "instructions": "Recommended size of less than 6 MB.",
+                                "instructions": "Recommended file size of 6 MB or smaller.",
                                 "required": 1,
                                 "conditional_logic": 0,
                                 "wrapper": {
@@ -159,7 +159,7 @@
                                 "label": "WebM Video",
                                 "name": "webm",
                                 "type": "file",
-                                "instructions": "Recommended size of less than 6 MB.",
+                                "instructions": "Recommended file size of 6 MB or smaller.",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
@@ -189,13 +189,13 @@
                                 "return_format": "array",
                                 "preview_size": "medium",
                                 "library": "all",
-                                "min_width": 3840,
-                                "min_height": 2160,
+                                "min_width": "",
+                                "min_height": "",
                                 "min_size": "",
                                 "max_width": "",
                                 "max_height": "",
                                 "max_size": "",
-                                "mime_types": "jpg,jpeg,gif,png"
+                                "mime_types": ""
                             }
                         ]
                     },
@@ -229,7 +229,7 @@
                         "max_width": "",
                         "max_height": "",
                         "max_size": "",
-                        "mime_types": "jpg,jpeg,gif,png"
+                        "mime_types": ""
                     },
                     {
                         "key": "field_60c25aa893f2b",
@@ -355,7 +355,7 @@
                         "name": "button_video_upload",
                         "type": "file",
                         "instructions": "",
-                        "required": 0,
+                        "required": 1,
                         "conditional_logic": [
                             [
                                 {

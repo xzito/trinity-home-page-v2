@@ -2,8 +2,6 @@
 
 namespace Xzito\TrinityHomePageV2;
 
-use Xzito\TrinityHomePageV2\Template;
-
 class Editor {
   public static function remove_support() {
     global $post;
