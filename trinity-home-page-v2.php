@@ -4,7 +4,7 @@
  * Plugin Name: Trinity Home Page v2
  * Plugin URI: https://github.com/xzito/trinity-home-page-v2
  * Description: Full-width home page design featuring a video banner.
- * Version: 0.1.0
+ * Version: 1.0.0
  * Author: James Boynton
  */
 
