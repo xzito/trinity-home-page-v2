@@ -350,7 +350,7 @@ acf_add_local_field_group(array(
             'embed' => 'Embed',
           ),
           'allow_null' => 0,
-          'default_value' => '',
+          'default_value' => 'upload',
           'layout' => 'horizontal',
           'return_format' => 'value',
         ),

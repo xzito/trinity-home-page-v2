@@ -12,6 +12,9 @@ class Video {
   }
 
   setSource() {
+    if (!this.modal) return;
+    if (!this.frame) return;
+
     this.source = this.buildSource();
   }
 
@@ -20,7 +23,7 @@ class Video {
   }
 
   uploaded() {
-    return (this.upload !== null ? true : false);
+    return (this.upload !== null && this.upload !== undefined);
   }
 
   embedded() {
@@ -28,11 +31,19 @@ class Video {
   }
 
   uploadedSource() {
-    return `${this.button.dataset.src}`;
+    return (this.maybeUploadedSource() || '');
+  }
+
+  maybeUploadedSource() {
+    return this.button && this.button.dataset && this.button.dataset.src;
   }
 
   embeddedSource() {
-    return this.frame.src;
+    return (this.maybeEmbeddedSource() || '');
+  }
+
+  maybeEmbeddedSource() {
+    return this.frame && this.frame.src;
   }
 
   addListeners() {
