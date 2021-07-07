@@ -1,6 +1,6 @@
 {
   "name": "trinity-home-page-v2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Full-width home page design featuring a video banner.",
   "repository": "https://github.com/xzito/trinity-home-page-v2.git",
   "author": "James Boynton <james.boynton0@gmail.com>",
@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.9.2",
-    "bootstrap": "^5.0.1",
+    "bootstrap": "^5.0.2",
     "jquery": "^3.6.0"
   }
 }

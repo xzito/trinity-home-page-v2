@@ -1,5 +1,6 @@
 import 'jquery';
-import 'bootstrap';
+import '../node_modules/bootstrap/js/src/util';
+import '../node_modules/bootstrap/js/src/modal.js';
 
 import home from './scripts/pages/home';
 
